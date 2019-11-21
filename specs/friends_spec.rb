@@ -86,8 +86,9 @@ end
   # (e.g. the function likes_to_eat(@person2, "bread") should return true, likes_to_eat(@person3, "spinach") should return false)
 
   def test_check_if_person_likes_a_food
-    expected = ""
-    actual = ""
+    expected = true
+    actual = check_if_person_likes_a_food(@person2, "soup")
+    assert_equal(expected, actual)
   end
 
   # 4. For a given person, add a new name to their list of friends
