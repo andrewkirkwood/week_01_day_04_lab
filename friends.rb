@@ -14,5 +14,20 @@ end
 
 def adds_new_friends(person, new_friend_name)
   person[:friends] << new_friend_name
-  # return 2
+end
+
+def remove_friend(person, friend_removed)
+  for existing_friend in person[:friends]
+    if existing_friend == friend_removed
+      person[:friends].delete(friend_removed)
+    end
+  end
+end
+
+def find_total_of_everyones_money(people)
+  total = 0
+  for person in people
+    total += person[:monies]
+  end
+  return total
 end

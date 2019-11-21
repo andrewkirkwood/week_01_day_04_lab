@@ -103,11 +103,20 @@ end
 
   # 5. For a given person, remove a specific name from their list of friends
   # (hint: Same as above, testing for the length of the array should be sufficient)
-
+def test_remove_friend
+  remove_friend(@person3, "Velma")
+  expected = 1
+  actual = @person3[:friends].length
+  assert_equal(expected, actual)
+end
 
   # 6. Find the total of everyone's money
   # (hint: use the @people array, remember how we checked the total number of eggs yesterday?)
-
+def test_find_total_of_everyones_money
+  expected = 143
+  actual = find_total_of_everyones_money(@people)
+  assert_equal(expected, actual)
+end
 
   # 7. For two given people, allow the first person to loan a given value of money to the other
   # (hint: our function will probably need 3 arguments passed to it... the lender, the lendee, and the amount for this function)
